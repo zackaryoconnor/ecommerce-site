@@ -1,1 +1,13 @@
 @import "tailwindcss";
+
+.outer-container {
+    display: grid;
+    place-items: center;
+    margin: 32px 16px;
+    padding-inline: 32px;
+}
+
+.inner-container {
+    max-width: 1200px;
+    width: 100%;
+}
