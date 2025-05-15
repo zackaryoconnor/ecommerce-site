@@ -4,7 +4,7 @@ import styles from '../Components/Navbar/Navbar.module.css'
 
 function Footer() {
   return (
-    <footer className="w-full text-gray-700 py-16 mt-24">
+    <footer className="w-full text-gray-700 py-16 mt-48">
       <div className="max-w-screen-xl mx-auto px-8 grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
         <div>
           <h2

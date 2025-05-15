@@ -11,7 +11,7 @@ const router = createBrowserRouter([
   { path: '/', element: <App /> },
   { path: '/about', element: <About /> },
   { path: '/bag', element: <Bag /> },
-  { path: '/productDetails', element: <ProductDetails /> },
+  { path: '/product/:id', element: <ProductDetails /> },
 ])
 
 createRoot(document.getElementById('root')!).render(

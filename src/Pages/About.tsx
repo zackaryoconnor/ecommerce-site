@@ -10,7 +10,7 @@ function About() {
           <div className="min-h-screen flex flex-col">
             <Navbar />
 
-            <main className="flex-grow px-6 py-12 max-w-screen-md mx-auto text-center space-y-8">
+            <main className="px-6 py-12 max-w-screen-md mx-auto text-center space-y-8">
               <h1 className="text-4xl font-bold text-gray-800">
                 About Thread & Needle
               </h1>
