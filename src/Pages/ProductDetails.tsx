@@ -15,18 +15,15 @@ function ProductDetails() {
   )
 
   useEffect(() => {
-    if (!product) {
+    if (!product && id) {
       const getProduct = async () => {
         try {
-          if (id) {
-            const data = await fetchProductById(id)
-            setProduct(data)
-          }
+          const data = await fetchProductById(id)
+          setProduct(data)
         } catch (error) {
-          console.log(error)
+          console.error(error)
         }
       }
-
       getProduct()
     }
   }, [id, product])

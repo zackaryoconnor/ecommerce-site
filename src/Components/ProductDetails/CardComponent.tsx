@@ -10,10 +10,7 @@ const CardComponent: React.FC<CardComponentProps> = ({
   product,
   showInfo = true,
 }) => {
-
-  console.log('CardComponent received product:', product)
-
-  const imageUrl = product?.imageURL?.[0] || 'emptyBag.png'
+  const imageUrl = product?.imageURL?.[0] || '/emptyBag.png'
   const type = product?.type || 'No type found'
   const price = product?.price || '0.00'
 

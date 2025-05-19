@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import type { Product } from '../types/Product'
-
 import Navbar from '../Components/Navbar/Navbar'
 import CardComponent from '../Components/ProductDetails/CardComponent'
 import Footer from '../Components/Footer'
@@ -16,7 +15,7 @@ function App() {
         const data = await fetchProducts()
         setProducts(data as Product[])
       } catch (error) {
-        console.log(error)
+        console.error(error)
       }
     }
 
@@ -32,8 +31,7 @@ function App() {
             <Link
               key={product._id}
               to={`/product/${product._id}`}
-              state={{ product }}
-            >
+              state={{ product }}>
               <CardComponent product={product} />
             </Link>
           ))}

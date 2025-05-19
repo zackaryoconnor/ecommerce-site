@@ -18,9 +18,7 @@ function MoreInfoComponent({ product }: MoreInfoComponentProps) {
       </p>
 
       <h2 className="text-lg font-semibold mb-2">Returns:</h2>
-      <p className="text-sm text-gray-700 leading-relaxed">
-        {product.returns}
-      </p>
+      <p className="text-sm text-gray-700 leading-relaxed">{product.returns}</p>
     </div>
   )
 }
