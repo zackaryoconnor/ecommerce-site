@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import type { Product } from '../types/Product'
 
 interface ImageGalleryProps {
@@ -13,7 +13,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ product }) => {
     <div className="w-full">
       <div className="mb-4">
         <img
-          className="w-lg h-124 object-cover rounded-md overflow-hidden"
+          className="w-full h-124 object-cover rounded-md"
           src={images[selectedImage]}
           alt={product.type}
         />
@@ -25,13 +25,14 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ product }) => {
             <div
               key={index}
               onClick={() => setSelectedImage(index)}
-              className={`w-20 h-20 flex-shrink-0 cursor-pointer rounded-md overflow-hidden border-2 ${
+              className={`w-20 h-20 flex-shrink-0 cursor-pointer rounded-md border-2 ${
                 selectedImage === index ? 'border-black' : 'border-transparent'
-              }`}>
+              }`}
+            >
               <img
                 className="w-full h-full object-cover"
                 src={image}
-                alt={`${product.type}`}
+                alt={`${product.type} - thumbnail ${index + 1}`}
               />
             </div>
           ))}

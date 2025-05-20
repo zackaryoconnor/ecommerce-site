@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:3000/api'
+const API_URL = 'http://54.90.193.130:3002/api'
 
 export const signup = async (email: string, password: string, name?: string) => {
   try {

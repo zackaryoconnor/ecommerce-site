@@ -26,9 +26,7 @@ function App() {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-      }
+      transition: { staggerChildren: 0.1 }
     }
   }
 
@@ -37,10 +35,7 @@ function App() {
     visible: {
       opacity: 1,
       y: 0,
-      transition: {
-        type: "spring",
-        stiffness: 100
-      }
+      transition: { type: "spring", stiffness: 100 }
     }
   }
 
@@ -49,7 +44,7 @@ function App() {
       <div className="inner-container">
         <Navbar />
         <motion.div 
-          className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 place-items-center gap-4 overflow-hidden mt-36"
+          className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mt-36 px-4"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
@@ -58,10 +53,13 @@ function App() {
             <motion.div
               key={product._id}
               variants={itemVariants}
+              className="flex justify-center"
             >
               <Link
                 to={`/product/${product._id}`}
-                state={{ product }}>
+                state={{ product }}
+                className="block w-full"
+              >
                 <CardComponent product={product} />
               </Link>
             </motion.div>

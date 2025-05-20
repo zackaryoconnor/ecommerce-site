@@ -1,4 +1,4 @@
-const url = 'http://localhost:3000/product'
+const url = 'http://54.90.193.130:3002/product'
 
 export const fetchProducts = async () => {
   try {

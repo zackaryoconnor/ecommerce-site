@@ -20,8 +20,8 @@ const Checkout = () => {
     setFormData({ ...formData, [name]: value })
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
+  const handleSubmit = (event: React.FormEvent) => {
+    event.preventDefault()
     console.log('Order placed:', { ...formData, items })
     clearBag()
     setSubmitted(true)
@@ -51,8 +51,8 @@ const Checkout = () => {
   return (
     <div className="outer-container">
       <Navbar />
-      <main className="min-h-screen px-4 py-16 bg-gray-50">
-        <div className="max-w-5xl mx-auto bg-white shadow rounded-lg p-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+      <main className="min-h-screen px-4 py-16">
+        <div className="max-w-5xl mx-auto p-8 grid grid-cols-1 md:grid-cols-2 gap-8">
 
           <div>
             <h2 className="text-2xl font-semibold mb-6">Shipping Information</h2>

@@ -143,13 +143,13 @@ const LoginSignupUI = ({ onSubmit, onToggleMode, isLogin, error }: LoginSignupUI
             whileHover={{ scale: 1.02, boxShadow: "0 4px 12px rgba(0,0,0,0.1)" }}
             whileTap={{ scale: 0.98 }}
             transition={{ type: "spring", stiffness: 400, damping: 17 }}
-            type="submit"
+              type="submit"
             className="w-full py-3 px-4 rounded-full text-sm font-medium text-white bg-black"
-          >
+            >
             {isLogin ? 'Log in' : 'Sign up'}
           </motion.button>
 
-          <div className="text-center">
+        <div className="text-center">
             <motion.button
               whileHover={{ scale: 1.05, textDecoration: "underline" }}
               whileTap={{ scale: 0.95 }}
@@ -160,7 +160,7 @@ const LoginSignupUI = ({ onSubmit, onToggleMode, isLogin, error }: LoginSignupUI
             >
               {isLogin ? 'Create an account' : 'Already have an account?'}
             </motion.button>
-          </div>
+        </div>
         </motion.form>
       </div>
     </motion.div>
