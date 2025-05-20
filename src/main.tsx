@@ -7,6 +7,7 @@ import About from './Pages/About.tsx'
 import Bag from './Pages/Bag.tsx'
 import Account from './Pages/Account.tsx'
 import ProductDetails from './Pages/ProductDetails.tsx'
+import Checkout from './Components/Checkout.tsx'
 import { BagProvider } from './context/BagContext'
 
 const router = createBrowserRouter([
@@ -15,6 +16,7 @@ const router = createBrowserRouter([
   { path: '/bag', element: <Bag /> },
   { path: '/account', element: <Account /> },
   { path: '/product/:id', element: <ProductDetails /> },
+  { path: '/checkout', element: <Checkout /> }
 ])
 
 createRoot(document.getElementById('root')!).render(

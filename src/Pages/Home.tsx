@@ -5,6 +5,7 @@ import Navbar from '../Components/Navbar/Navbar'
 import CardComponent from '../Components/ProductDetails/CardComponent'
 import Footer from '../Components/Footer'
 import { fetchProducts } from '../Services/ProductServices'
+import { motion } from 'framer-motion'
 
 function App() {
   const [products, setProducts] = useState<Product[]>([])
@@ -18,24 +19,54 @@ function App() {
         console.error(error)
       }
     }
-
     getProducts()
   }, [])
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  }
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        type: "spring",
+        stiffness: 100
+      }
+    }
+  }
 
   return (
     <div className="outer-container">
       <div className="inner-container">
         <Navbar />
-        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 place-items-center gap-4 overflow-hidden mt-36">
+        <motion.div 
+          className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 place-items-center gap-4 overflow-hidden mt-36"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
           {products.map((product) => (
-            <Link
+            <motion.div
               key={product._id}
-              to={`/product/${product._id}`}
-              state={{ product }}>
-              <CardComponent product={product} />
-            </Link>
+              variants={itemVariants}
+            >
+              <Link
+                to={`/product/${product._id}`}
+                state={{ product }}>
+                <CardComponent product={product} />
+              </Link>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
         <Footer />
       </div>
     </div>
