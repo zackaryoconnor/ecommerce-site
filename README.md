@@ -7,10 +7,10 @@ This is a modern, full-stack e-commerce platform designed to deliver a complete 
 project link http://54.90.193.130:5173
 
 ## Features
-Product Catalog: Browse a wide range of products with detailed descriptions and images.
-Shopping Cart: Add, update, and remove items from your cart seamlessly.
-User Authentication: Secure user registration and login.
-Responsive Design: A user-friendly experience across desktops, tablets, and mobile devices.
+- Product Catalog: Browse a wide range of products with detailed descriptions and images.
+- Shopping Cart: Add, update, and remove items from your cart seamlessly.
+- User Authentication: Secure user registration and login.
+- Responsive Design: A user-friendly experience across desktops, tablets, and mobile devices.
 
 ## Technologies Used
 This project leverages a modern and robust tech stack to deliver a seamless e-commerce experience:
